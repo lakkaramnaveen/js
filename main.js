@@ -10,4 +10,4 @@ console.log(myArray);
 
 console.log(myArray.length);
 
-
+console.log(myArray[myArray.length - 1]);
