@@ -1,5 +1,5 @@
 // Arrays
-const myArray = ["A", "B", "C", "D", "E", "F"];
-const newArray = myArray.slice(2);
-
-console.log(newArray);
+const myArray = ["A", "B", "C"];
+const myArrayB = ["D", "E", "F"];
+const new1 = [...myArray, ...myArrayB];
+console.log(new1);
