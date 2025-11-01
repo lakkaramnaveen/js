@@ -6,11 +6,10 @@ myArray[0] = "Dave";
 myArray[1] = 1001;
 myArray[2] = false;
 
+myArray.push("school");
+
 console.log(myArray);
 
-console.log(myArray.length);
+myArray.pop();
 
-console.log(myArray[myArray.length - 1]);
-
-console.log(myArray[1]);
-
+console.log(myArray);
