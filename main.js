@@ -10,7 +10,7 @@ const anotherObj = {
     afternoon: "Iced tea",
   },
   action: function () {
-    return "Hello";
+    return `Time for ${this.beverage.morning}`;
   },
 };
 console.log(anotherObj.action());
