@@ -1,31 +1,13 @@
-// Objects
-// key-value pairs
-const vehicle = {
-  wheels: 4,
-  engine: function () {
-    return "Vrrroom!!";
-  },
+const band = {
+  vocals: "Sid",
+  guitar: "ar rahman",
+  bass: "nani",
+  drums: "aaaaa",
 };
 
-const truck = Object.create(vehicle);
-truck.doors = 2;
-//inheritence
-console.log(truck);
-console.log(truck.engine());
+console.log(Object.keys(band));
+console.log(Object.values(band));
 
-const car = Object.create(vehicle);
-car.doors = 4;
-car.engine = function () {
-  return "whoooh!";
-};
-console.log(car.engine());
-console.log(car.wheels);
-
-const tesla = Object.create(car);
-console.log(tesla.wheels);
-
-tesla.engine = function () {
-  return "Shhhhhhhhhh........";
-};
-
-console.log(tesla.engine());
+for (let job in band) {
+  console.log(`on ${job}, it's ${band[job]}`);
+}
