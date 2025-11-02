@@ -1,11 +1,14 @@
-const band = {
-  vocals: "Sid",
-  guitar: "ar rahman",
-  bass: "nani",
-  drums: "aaaaa",
-};
+class Pizza {
+  constructor(pizzaType) {
+    this.size = "medium";
+    this.crust = "original";
+    this.type = pizzaType;
+  }
 
-// destructuring objects
+  bake() {
+    console.log(`Baking a ${this.size} ${this.crust} ${this.type} crust pizza`);
+  }
+}
 
-const { vocals, guitar, bass, drums } = band;
-console.log(guitar);
+const myPizza = new Pizza();
+myPizza.bake();
