@@ -1,25 +1,29 @@
-/* class Pizza {
+class Pizza {
+  crust = "original";
+  #sauce = "traditional";
+  #size;
+
   constructor(pizzaSize) {
-    this._size = pizzaSize;
-    this._crust = "original";
+    this.#size = pizzaSize;
   }
 
   getCrust() {
-    return this._crust;
+    return this.crust;
   }
 
   setCrust(pizzaCrust) {
-    this._crust = pizzaCrust;
+    this.crust = pizzaCrust;
   }
-} */
 
-function pizzaFactory(pizzaSize) {
-  const crust = "original";
-  const size = pizzaSize;
-  return {
-    bake: () => console.log(`Baking a ${size} ${crust} crust pizza.`),
-  };
+  hereYouGO() {
+    console.log(
+      `here's your order - ${this.crust} ${this.#sauce} sauce ${
+        this.#size
+      } pizza.`
+    );
+  }
 }
 
-const myPizza = pizzaFactory("small");
-myPizza.bake();
+const myPizza = new Pizza("large");
+myPizza.hereYouGO();
+console.log(myPizza.#sauce);
