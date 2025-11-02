@@ -6,9 +6,8 @@ const band = {
 };
 
 band.keyboard = "player";
-console.log(Object.keys(band));
-console.log(Object.values(band));
 
+delete band.drums;
 for (let job in band) {
   console.log(`on ${job}, it's ${band[job]}`);
 }
