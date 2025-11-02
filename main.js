@@ -5,9 +5,7 @@ const band = {
   drums: "aaaaa",
 };
 
-band.keyboard = "player";
+// destructuring objects
 
-delete band.drums;
-for (let job in band) {
-  console.log(`on ${job}, it's ${band[job]}`);
-}
+const { vocals, guitar, bass, drums } = band;
+console.log(guitar);
