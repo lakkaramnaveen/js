@@ -5,6 +5,7 @@ const band = {
   drums: "aaaaa",
 };
 
+band.keyboard = "player";
 console.log(Object.keys(band));
 console.log(Object.values(band));
 
