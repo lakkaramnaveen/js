@@ -7,3 +7,8 @@ console.log(view2);
 
 view1.style.display = "flex";
 view2.style.display = "none";
+
+const views = document.getElementsByClassName("view");
+console.log(views);
+const sameViews = document.querySelectorAll(".view");
+console.log(sameViews);
