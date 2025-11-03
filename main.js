@@ -41,3 +41,22 @@ console.log(evenDivs[0]);
 console.log(evenDivs[0].parentElement);
 console.log(evenDivs[0].parentElement.children);
 console.log(evenDivs[0].parentElement.childNodes);
+console.log(evenDivs[0].parentElement.hasChildNodes());
+console.log(evenDivs[0].parentElement.lastChild);
+console.log(evenDivs[0].parentElement.lastElementChild);
+console.log(evenDivs[0].parentElement.firstChild);
+console.log(evenDivs[0].parentElement.firstElementChild);
+console.log(evenDivs[0].parentElement.nextSibling);
+console.log(evenDivs[0].parentElement.nextElementSibling.nextElementSibling);
+console.log(evenDivs[0].parentElement.previousSibling);
+console.log(evenDivs[0].parentElement.previousElementSibling);
+
+view1.style.display = "none";
+view2.style.display = "flex";
+view2.style.flexDirection = "row";
+view2.style.flexWrap = "wrap";
+view2.style.margin = "10px";
+
+while (view2.lastChild) {
+  view2.lastChild.remove();
+}
