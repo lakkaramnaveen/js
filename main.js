@@ -1,3 +1,3 @@
 "use strict";
-let variable = "Dave";
-console.log(variable);
+const name = "Nani"; //type errors
+console.log(name);
