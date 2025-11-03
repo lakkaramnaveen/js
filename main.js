@@ -5,8 +5,8 @@ console.log(view1);
 const view2 = document.getElementById("view2");
 console.log(view2);
 
-view1.style.display = "flex";
-view2.style.display = "none";
+// view1.style.display = "flex";
+// view2.style.display = "none";
 
 const views = document.getElementsByClassName("view");
 console.log(views);
@@ -60,3 +60,18 @@ view2.style.margin = "10px";
 while (view2.lastChild) {
   view2.lastChild.remove();
 }
+
+const createDivs = (parent, iter) => {
+  const newDiv = document.createElement("div");
+  newDiv.textContent = iter;
+  newDiv.style.backgroundColor = "#000";
+  newDiv.style.width = "100px";
+  newDiv.style.height = "100px";
+  newDiv.style.margin = "10px";
+  newDiv.style.display = "flex";
+  newDiv.style.justifyContent = "center";
+  newDiv.style.alignItems = "center";
+  parent.append(newDiv);
+};
+
+createDivs(view2, 10);
