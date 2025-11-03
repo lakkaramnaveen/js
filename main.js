@@ -1,29 +1,21 @@
-class Pizza {
-  crust = "original";
-  #sauce = "traditional";
-  #size;
+const myObj = {
+  name: "Dave",
+  hobbies: ["eat", "sleep", "code"],
+  hello: function () {
+    console.log("Hello!");
+  },
+};
 
-  constructor(pizzaSize) {
-    this.#size = pizzaSize;
-  }
+console.log(myObj);
+console.log(myObj.name);
+myObj.hello();
+console.log(typeof myObj);
 
-  getCrust() {
-    return this.crust;
-  }
+const sendJSON = JSON.stringify(myObj);
+console.log(sendJSON);
+console.log(typeof sendJSON);
+console.log(typeof myObj.name);
 
-  setCrust(pizzaCrust) {
-    this.crust = pizzaCrust;
-  }
-
-  hereYouGO() {
-    console.log(
-      `here's your order - ${this.crust} ${this.#sauce} sauce ${
-        this.#size
-      } pizza.`
-    );
-  }
-}
-
-const myPizza = new Pizza("large");
-myPizza.hereYouGO();
-console.log(myPizza.#sauce);
+const receivedJSON = JSON.parse(sendJSON);
+console.log(receivedJSON);
+console.log(typeof receivedJSON);
