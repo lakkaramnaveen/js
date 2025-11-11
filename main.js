@@ -1,5 +1,9 @@
-if (true) {
-  var x = 5;
-}
-console.log(x); // x is 5
-// var global scope or function scope
+var x;
+console.log(x === undefined); // true
+x = 3;
+
+(function () {
+  var x;
+  console.log(x); // undefined
+  x = "local value";
+})();
