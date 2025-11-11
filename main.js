@@ -1,4 +1,2 @@
-(function () {
-  "use strict";
-  alert("Nani");
-})();
+/* You can /* */
+syntax error */
