@@ -1,9 +1,5 @@
-var x;
-console.log(x === undefined); // true
-x = 3;
+console.log(x); // ReferenceError
+const x = 3;
 
-(function () {
-  var x;
-  console.log(x); // undefined
-  x = "local value";
-})();
+console.log(y); // ReferenceError
+let y = 3;
