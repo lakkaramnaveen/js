@@ -1,5 +1,5 @@
-if (Math.random() > 0.5) {
-  const y = 5;
+if (true) {
+  var x = 5;
 }
-console.log(y); // ReferenceError: y is not defined
-// block scoped
+console.log(x); // x is 5
+// var global scope or function scope
