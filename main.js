@@ -1,19 +1,11 @@
-console.log("1.1" + "1.1"); // '1.11.1'
-console.log(+"1.1" + +"1.1"); // 2.2
-// Note: the parentheses are added for clarity, not required.
-const coffees = ["French Roast", "Colombian", "Kona"];
-console.log(coffees);
-const fish = ["Lion", , "Angel"];
-console.log(fish);
+const sales = "Toyota";
 
-const myList = ["home", , "school"];
-console.log(myList.length, myList);
+function carTypes(name) {
+  return name === "Honda" ? name : `Sorry, we don't sell ${name}.`;
+}
 
-const myList1 = [, "home", , "school"];
-console.log(myList1.length, myList1);
+const car = { myCar: "Saturn", getCar: carTypes("Honda"), special: sales };
 
-const myList2 = ["home", , "school", ,];
-console.log(myList2.length, myList2);
-
-const myList3 = ["home", "school", +"hospital"];
-console.log(myList3);
+console.log(car.myCar); // Saturn
+console.log(car.getCar); // Honda
+console.log(car.special); // Toyota
