@@ -1,9 +1,3 @@
-// THIS WILL CAUSE AN ERROR
-function f() {}
-const f = 5;
-
-// THIS WILL CAUSE AN ERROR TOO
-function f() {
-  const g = 5;
-  var g;
-}
+const MY_ARRAY = ["HTML", "CSS"];
+MY_ARRAY.push("JAVASCRIPT");
+console.log(MY_ARRAY); // ['HTML', 'CSS', 'JAVASCRIPT'];
