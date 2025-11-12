@@ -1,9 +1,13 @@
-const unusualPropertyNames = {
-  "": "An empty string",
-  "!": "Bang!",
+const obj = {
+  // __proto__
+  __proto__: theProtoObj,
+  // Shorthand for 'handler: handler'
+  handler,
+  // Methods
+  toString() {
+    // Super calls
+    return `d ${super.toString()}`;
+  },
+  // Computed (dynamic) property names
+  ["prop_" + (() => 42)()]: 42,
 };
-console.log(unusualPropertyNames.""); // SyntaxError: Unexpected string
-console.log(unusualPropertyNames.!); // SyntaxError: Unexpected token !
-
-console.log(unusualPropertyNames[""]); // An empty string
-console.log(unusualPropertyNames["!"]); // Bang!
