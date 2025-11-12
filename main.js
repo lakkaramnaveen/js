@@ -1,11 +1,9 @@
-const sales = "Toyota";
+const unusualPropertyNames = {
+  "": "An empty string",
+  "!": "Bang!",
+};
+console.log(unusualPropertyNames.""); // SyntaxError: Unexpected string
+console.log(unusualPropertyNames.!); // SyntaxError: Unexpected token !
 
-function carTypes(name) {
-  return name === "Honda" ? name : `Sorry, we don't sell ${name}.`;
-}
-
-const car = { myCar: "Saturn", getCar: carTypes("Honda"), special: sales };
-
-console.log(car.myCar); // Saturn
-console.log(car.getCar); // Honda
-console.log(car.special); // Toyota
+console.log(unusualPropertyNames[""]); // An empty string
+console.log(unusualPropertyNames["!"]); // Bang!
