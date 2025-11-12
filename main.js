@@ -1,5 +1,9 @@
-console.log(x); // ReferenceError
-const x = 3;
+// THIS WILL CAUSE AN ERROR
+function f() {}
+const f = 5;
 
-console.log(y); // ReferenceError
-let y = 3;
+// THIS WILL CAUSE AN ERROR TOO
+function f() {
+  const g = 5;
+  var g;
+}
