@@ -1,15 +1,43 @@
-// Will print the number of symbols in the string including whitespace.
-console.log("Joyo's cat".length); // In this case, 10.
+const formatArg = (arg) => {
+  if (Array.isArray(arg)) {
+    // Print a bulleted list
+    return arg.map((part) => `- ${part}`).join("\n");
+  }
+  if (arg.toString === Object.prototype.toString) {
+    // This object will be serialized to "[object Object]".
+    // Let's print something nicer.
+    return JSON.stringify(arg);
+  }
+  return arg;
+};
 
-// Basic literal string creation
-`In JavaScript '\n' is a line-feed.`;
+const print = (segments, ...args) => {
+  // For any well-formed template literal, there will always be N args and
+  // (N+1) string segments.
+  let message = segments[0];
+  segments.slice(1).forEach((segment, index) => {
+    message += formatArg(args[index]) + segment;
+  });
+  console.log(message);
+};
 
-// Multiline strings
-`In JavaScript, template strings can run
- over multiple lines, but double and single
- quoted strings cannot.`;
+const todos = [
+  "Learn JavaScript",
+  "Learn Web APIs",
+  "Set up my website",
+  "Profit!",
+];
 
-// String interpolation
-const name = "Lev",
-  time = "today";
-`Hello ${name}, how are you ${time}?`;
+const progress = { javascript: 20, html: 50, css: 10 };
+
+print`I need to do:
+${todos}
+My current progress is: ${progress}
+`;
+
+// I need to do:
+// - Learn JavaScript
+// - Learn Web APIs
+// - Set up my website
+// - Profit!
+// My current progress is: {"javascript":20,"html":50,"css":10}
