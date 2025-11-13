@@ -41,3 +41,7 @@ My current progress is: ${progress}
 // - Set up my website
 // - Profit!
 // My current progress is: {"javascript":20,"html":50,"css":10}
+
+print(["I need to do:\n", "\nMy current progress is: ", "\n"], todos, progress);
+
+console.log("I need to do:\n%o\nMy current progress is: %o\n", todos, progress);
