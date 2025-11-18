@@ -1,11 +1,26 @@
-import playGuitar from "./guitar.js";
-import { shredding as shred, plucking } from "./guitar.js";
-import User from "./user.js";
+// Higher order components
+import { posts } from "./posts.js";
 
-const me = new User("email@gmail.com", "nani");
-console.log(me);
-console.log(me.greeting());
+posts.forEach((post) => {
+  console.log(post);
+});
 
-console.log(playGuitar());
-console.log(shred());
-console.log(plucking);
+console.clear();
+
+const filteredPosts = posts.filter((post) => {
+  return post.userId === 1;
+});
+
+console.log(filteredPosts);
+
+const mappedPosts = filteredPosts.map((post) => {
+  return post.id * 10;
+});
+
+console.log(mappedPosts);
+
+const reducedPosts = mappedPosts.reduce((sum, post) => {
+  return sum + post;
+});
+
+console.log(reducedPosts);
