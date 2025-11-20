@@ -1,26 +1,13 @@
-// Higher order components
-import { posts } from "./posts.js";
+function firstFunction(parameters, callback) {
+  // do something
+  callback();
+}
 
-posts.forEach((post) => {
-  console.log(post);
-});
+// callback hell
+firstFunction(para, function(){
+    secondFunction(para, function(){
+        thirdFunctino(para, function(){
 
-console.clear();
-
-const filteredPosts = posts.filter((post) => {
-  return post.userId === 1;
-});
-
-console.log(filteredPosts);
-
-const mappedPosts = filteredPosts.map((post) => {
-  return post.id * 10;
-});
-
-console.log(mappedPosts);
-
-const reducedPosts = mappedPosts.reduce((sum, post) => {
-  return sum + post;
-});
-
-console.log(reducedPosts);
+        })
+    })
+})
