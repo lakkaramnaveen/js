@@ -1,5 +1,5 @@
 const myPromise = new Promise((resolve, reject) => {
-  const error = true;
+  const error = false;
   if (!error) {
     resolve("Yes! resolved the promise!");
   } else {
@@ -7,15 +7,16 @@ const myPromise = new Promise((resolve, reject) => {
   }
 });
 
-console.log(myPromise);
+const myNextPromise = new Promise((resolve, reject) => {
+  setTimeout(function () {
+    resolve("myNext promies resolved!");
+  }, 0);
+});
 
-myPromise
-  .then((value) => {
-    return value + 1;
-  })
-  .then((newValue) => {
-    console.log(newValue);
-  })
-  .catch((err) => {
-    console.log(err);
-  });
+myNextPromise.then((value) => {
+  console.log(value);
+});
+
+myPromise.then((value) => {
+  console.log(value);
+});
