@@ -1,13 +1,10 @@
-function firstFunction(parameters, callback) {
-  // do something
-  callback();
-}
+const myPromise = new Promise((resolve, reject) => {
+  const error = false;
+  if (!error) {
+    resolve("Yes! resolved the promise!");
+  } else {
+    reject("No! rejected the promise");
+  }
+});
 
-// callback hell
-firstFunction(para, function(){
-    secondFunction(para, function(){
-        thirdFunctino(para, function(){
-
-        })
-    })
-})
+console.log(myPromise);
