@@ -1,12 +1,14 @@
-const getAllUserEmails = async () => {
-  const response = await fetch("https://jsonplaceholder.typicode.com/users");
-  const jsonUserData = await response.json();
+// second parameter of fetch
 
-  const userEmailArray = jsonUserData.map((user) => {
-    return user.email;
+const getDadJoke = async () => {
+  const response = await fetch("https://icanhazdadjoke.com/", {
+    method: "GET",
+    headers: {
+      Accept: "application/json",
+    },
   });
-
-  console.log(userEmailArray);
+  const jsonJokeData = await response.json();
+  console.log(jsonJokeData.joke);
 };
 
-getAllUserEmails();
+getDadJoke();
