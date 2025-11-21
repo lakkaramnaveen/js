@@ -3,19 +3,15 @@ const myUsers = {
 };
 
 const myCoolFunction = async () => {
-  const jsonUserData = (
-    await fetch("https://jsonplaceholder.typicode.com/users")
-  ).json();
+  const jsonUserData = await fetch(
+    "https://jsonplaceholder.typicode.com/users"
+  );
 
-  console.log(jsonUserData);
+  const response = await jsonUserData.json();
+
+  console.log(response);
+
+  return response;
 };
 
-const users = fetch("https://jsonplaceholder.typicode.com/users")
-  .then((response) => {
-    return response.json();
-  })
-  .then((data) => {
-    data.forEach((user) => {
-      console.log(user);
-    });
-  });
+myCoolFunction();
